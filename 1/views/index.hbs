@@ -1,0 +1,49 @@
+
+<div class="wrap">
+    <div class="content">
+        <h3>Post</h3>
+        <div class="posts">
+            {{#if post.length}}
+            {{#each post}}
+            <div class="post">
+                <div class="post__title">
+                    <h2>{{title}}</h2>
+                </div>
+                <div class="post__content">
+                    <img src="http://placehold.jp/180x180.png" alt="">
+                    <p>{{messagePrev}}</p>
+                </div>
+                <div class="post__footer">
+                    <div class="date">
+                        <span>Date: 18/10</span>
+                        <span>Time: 16:47</span>
+                    </div>
+                    
+                    <a href="/" class="link">Посмотреть</a>
+                </div>
+            </div> 
+            {{/each}}
+            {{else}}
+                <p>Постов нет</p>
+            {{/if}}
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <h3>Category</h3>
+        <div class="category">
+            <div class="category__item">
+                <input type="checkbox" id="filter1">
+                <label for="filter1">2019</label>
+            </div>
+             <div class="category__item">
+                <input type="checkbox" id="filter2">
+                <label for="filter2">2018</label>
+            </div>
+             <div class="category__item">
+                <input type="checkbox" id="filter3">
+                <label for="filter3">2017</label>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+
+<div class="wrap">
+    <div class="content addpost">
+        <h3>Add post</h3>
+        <form action="/addpost" method="POST" class="forma">
+        
+            <div class="formAddPost">
+                <label for="title">Название поста</label>
+                <input type="text" name="title" id="title" required>
+                
+            </div>
+            <div class="formAddPost">
+                <label for="">Текст для предварительного просмотра</label>
+                <textarea name="messagePrev" minlength="400" maxlength="400"></textarea>
+            </div>
+            <div class="formAddPost">
+                <label for="">Текст</label>
+                <textarea name="messageFull" minlength="400"></textarea>
+            </div>
+            <div>
+                <select id="">
+                    <option value="1">2019</option>
+                    <option value="2">2018</option>
+                    <option value="3">2017</option>
+                </select>
+            </div>
+            <button type="submit">Добавить</button>
+        </form>
+    </div>
+</div>
