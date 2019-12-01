@@ -11,4 +11,14 @@ router.get('/', async (req, res) => {
     });
 })
 
+router.get('/:id', async (req, res) => {
+    const post = Post.findById(req.params.id, function(err, post){
+        if(err) return next(err);
+        res.json(post);
+      });
+    res.render('post', {
+        post
+    });
+})
+
 module.exports = router;
