@@ -7,7 +7,7 @@
             {{#each post}}
             <div class="post">
                 <div class="post__title">
-                    <h2>{{title}}</h2>
+                    <h2>{{title}} <i class="fas fa-edit"></i></h2>
                 </div>
                 <div class="post__content">
                     <img src="http://placehold.jp/180x180.png" alt="">
@@ -19,7 +19,7 @@
                         <span>Time: 16:47</span>
                     </div>
                     
-                    <a href="/{{id}}" class="link">Посмотреть</a>
+                    <a href="/view/{{id}}" class="link">Посмотреть</a>
                 </div>
             </div> 
             {{/each}}
@@ -32,18 +32,12 @@
     <div class="sidebar">
         <h3>Category</h3>
         <div class="category">
+            {{#each category}}
             <div class="category__item">
-                <input type="checkbox" id="filter1">
-                <label for="filter1">2019</label>
+                <input type="checkbox" id="filter">
+                <label for="filter">{{title}}</label>
             </div>
-             <div class="category__item">
-                <input type="checkbox" id="filter2">
-                <label for="filter2">2018</label>
-            </div>
-             <div class="category__item">
-                <input type="checkbox" id="filter3">
-                <label for="filter3">2017</label>
-            </div>
+            {{/each}}
         </div>
     </div>
 </div>

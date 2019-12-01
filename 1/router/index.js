@@ -1,21 +1,19 @@
 const {Router} = require('express');
 const router = Router();
 const Post = require('../model/post')
+const Category = require('../model/category')
 
 router.get('/', async (req, res) => {
     const post = await Post.find();
-    console.log(post)
-
+    const category = await Category.find();
     res.render('index', {
-        post
+        post,
+        category
     });
 })
 
-router.get('/:id', async (req, res) => {
-    const post = Post.findById(req.params.id, function(err, post){
-        if(err) return next(err);
-        res.json(post);
-      });
+router.get('/view/:id', async (req, res) => {
+    const post  = await Post.findById(req.params.id);
     res.render('post', {
         post
     });

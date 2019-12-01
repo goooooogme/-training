@@ -18,10 +18,13 @@
                 <textarea name="messageFull" minlength="400"></textarea>
             </div>
             <div>
-                <select id="">
-                    <option value="1">2019</option>
-                    <option value="2">2018</option>
-                    <option value="3">2017</option>
+                <select name="category" required>
+                    <option disabled selected value=''>Выберите категорию:</option>
+          
+                    {{#each category}}
+                        <option value="{{title}}" >{{title}}</option>
+                    {{/each}}
+         
                 </select>
             </div>
             <button type="submit">Добавить</button>

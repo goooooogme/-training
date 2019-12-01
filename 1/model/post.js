@@ -12,7 +12,8 @@ const Post = new Schema({
     messageFull: {
         type: String,
         required: true
-    }, 
+    },
+    category: String
 })
 
 module.exports = model('Post', Post);
